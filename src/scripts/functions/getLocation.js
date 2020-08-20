@@ -1,4 +1,3 @@
-import convertToCord from './convertToCord';
 import getWeather from './getWeather.js';
 
 const getLocation = () => {
