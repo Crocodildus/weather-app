@@ -1,4 +1,4 @@
-const CreateEl = (element, text, elClass) => {
+const CreateEl = (element, text, elClass, parent) => {
   const el = document.createElement(element);
 
   element === 'img' ? el.src = text
@@ -16,6 +16,8 @@ const CreateEl = (element, text, elClass) => {
       console.log('no class/id');
       break;
   }
+
+  parent.appendChild(el);
 };
 
 export default CreateEl;

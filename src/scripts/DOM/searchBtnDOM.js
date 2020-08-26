@@ -1,5 +1,4 @@
 import * as DOMVar from '../var/DOMVar';
-import getWeather from '../functions/getWeather';
 import convertToCord from '../functions/convertToCord';
 
 const searchDOM = () => {
