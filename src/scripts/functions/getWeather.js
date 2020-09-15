@@ -2,6 +2,7 @@ import weatherApi from '../var/weatherApi';
 import createCards from './createCards';
 import putDayNightTemp from './putDayNightTemp';
 import cardTempl from './HTMLCardTemplate';
+import setIcon from './setIcon';
 
 let cards = [];
 const getWeather = (lat, lon) => {
@@ -14,6 +15,7 @@ const getWeather = (lat, lon) => {
     const dailyData = weatherData.daily;
     createCards(cards);
     cards.map(card => putDayNightTemp(dailyData, cards));
+    setIcon(dailyData, cards);
     console.table(cards);
     return weatherData;
   }
