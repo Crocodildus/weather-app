@@ -10,7 +10,6 @@ const createCards = (arr) => {
     arr[i] = new Card();
     arr[i].day = days[i];
   }
-  console.table(arr);
 };
 
 export default createCards;

@@ -4,7 +4,6 @@ const cardsDay = (array) => {
     today.setDate(today.getDate() + i);
     let weekDay = today.toString().slice(0, 3);
     array.push(weekDay);
-    console.log(weekDay);
   }
 };
 
