@@ -9,7 +9,6 @@ const convertToCord = (cityName) => {
     const locationData = await response.json();
     const lat = locationData.results[0].geometry.lat;
     const lon = locationData.results[0].geometry.lng;
-    console.log(lat, lon);
     getWeather(lat, lon);
   }
 
