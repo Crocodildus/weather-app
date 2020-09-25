@@ -1,11 +1,5 @@
-.skyline {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
+@tailwind base;
 
-.skyline img {
-  width: 100%;
-  height: auto;
-  margin: 0 0 -350px 0;
-}
+@tailwind components;
+
+@tailwind utilities;

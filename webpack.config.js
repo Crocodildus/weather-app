@@ -1,5 +1,12 @@
 const path = require('path');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgeCssPlugin = require('purgecss-webpack-plugin');
+
+const PATHS = {
+  src: path.join(__dirname, 'src')
+};
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -21,7 +28,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader', options: { importLoaders: 1 }
+          },
+          'postcss-loader'
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -65,6 +77,13 @@ module.exports = {
       hash: true,
       template: './src/templates/index.html',
       filename: 'index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+      chunkFilename: 'styles.css'
+    }),
+    new PurgeCssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
     })
   ]
 };
