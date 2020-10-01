@@ -7,7 +7,15 @@ module.exports = {
     './src/templates/index.html'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Tinos': ['Tinos', 'sans-serif'],
+        'Asap': ['Asap', 'sans-serif'],
+      },
+      spacing: {
+        '128': '32rem'
+      }
+    },
   },
   variants: {},
   plugins: [],

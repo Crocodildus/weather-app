@@ -6,6 +6,6 @@ import searchAutoComplete from './scripts/DOM/autocomplete';
 import icons from './scripts/var/icons';
 import sunset from './img/sunset.jpg';
 
-searchAutoComplete();
-getLocation();
-searchDOM();
+// searchAutoComplete();
+// getLocation();
+// searchDOM();
