@@ -3,6 +3,10 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgeCssPlugin = require('purgecss-webpack-plugin');
+const webpack = require('webpack');
+const Dotenv = require('dotenv').config( {
+  path: path.join(__dirname, '/.env')
+} );
 
 const PATHS = {
   src: path.join(__dirname, 'src')
@@ -73,6 +77,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(Dotenv.parsed)
+    }),
     new HtmlWebpackPlugin({
       hash: true,
       template: './src/templates/index.html',

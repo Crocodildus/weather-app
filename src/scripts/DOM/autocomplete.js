@@ -5,7 +5,9 @@ const options = {
   types: ['(cities)']
 };
 const searchAutoComplete = () => {
-  let autocomplete = new google.maps.places.Autocomplete(DOMVar.search, options);
+  $(function () {
+    let autocomplete = new google.maps.places.Autocomplete(DOMVar.search, options);
+  });
 };
 
 export default searchAutoComplete;

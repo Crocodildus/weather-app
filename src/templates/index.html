@@ -10,31 +10,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
 </head>
 
-<body class="flex text-white">
-  <div>
+<body>
+  <main>
     <form>
       <input data-search type="search" placeholder="City">
       <button data-searchBtn>Go!</button>
     </form>
-    <div class="pt-5 pl-40">
-      <h4 data-city class="inline-block h-16 text-5xl font-Tinos">London, UK</h3>
-        <h5 data-date class="text-2xl font-Asap">Monday, 29 August</h5>
-    </div>
-    <div class="flex justify-between px-56  flex-row items-center">
-      <div class="flex justify-items-center">
-        <img data-todayIcon src="./src/icons/clouds.png" alt="">
-        <div class=" flex flex-col justify-center">
-          <h4 data-todayTemp class="inline-block h-20 text-6xl font-Tinos">21C</h4>
-          <h5 data-todayWeather class="text-3xl font-Asap">Mostly Sunny</h5>
+    <section class="mx-20 mb-20 text-white flex">
+    <div class="w-128 max-w-xl font-sans overflow-hidden bg-gray-900 rounded-lg shadow-lg mt-6">
+      <div>
+        <h2>Current weather</h2>
+        <div class="flex justify-between">
+          <img class="h-32" data-todayIcon src="./src/icons/clouds.png" alt="">
+          <div>
+            <h4 data-city class="inline-block h-16 text-5xl">London, UK</h4>
+          <h5 data-date class="text-2xl">Monday, 29 August</h5>
+          </div>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-12 ">
+      <div class="flex justify-between px-56  flex-row items-center">
+        <div class="flex justify-items-center">
+          <div class=" flex flex-col justify-center">
+            <h4 data-todayTemp class="inline-block h-20 text-6xl">21C</h4>
+            <h5 data-todayWeather class="text-3xl">Mostly Sunny</h5>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div>
-    <div data-weather class="w-128 max-w-lg font-sans overflow-hidden bg-gray-900 rounded-lg shadow-lg mt-6">
+    <div data-weather class="w-128 max-w-xl font-sans overflow-hidden bg-gray-900 rounded-lg shadow-lg mt-6">
       <!-- Current weather -->
       <div class="flex items-center justify-between px-6 py-8">
         <div class="flex items-center">
@@ -56,7 +60,7 @@
           <p class="w-1/6 text-xl text-gray-200">Day1</p>
           <div class="w-4/6 px-4 flex items-center">
             <img class="h-16" src="../src/icons/snow.png" alt="">
-            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>          
+            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>
           </div>
           <div class="w-1/6 text-right">
             <p>5C</p>
@@ -67,7 +71,7 @@
           <p class="w-1/6 text-xl text-gray-200">Day1</p>
           <div class="w-4/6 px-4 flex items-center">
             <img class="h-16" src="../src/icons/snow.png" alt="">
-            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>          
+            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>
           </div>
           <div class="w-1/6 text-right">
             <p>5C</p>
@@ -78,7 +82,7 @@
           <p class="w-1/6 text-xl text-gray-200">Day1</p>
           <div class="w-4/6 px-4 flex items-center">
             <img class="h-16" src="../src/icons/snow.png" alt="">
-            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>          
+            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>
           </div>
           <div class="w-1/6 text-right">
             <p>5C</p>
@@ -89,7 +93,7 @@
           <p class="w-1/6 text-xl text-gray-200">Day1</p>
           <div class="w-4/6 px-4 flex items-center">
             <img class="h-16" src="../src/icons/snow.png" alt="">
-            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>          
+            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>
           </div>
           <div class="w-1/6 text-right">
             <p>5C</p>
@@ -100,7 +104,7 @@
           <p class="w-1/6 text-xl text-gray-200">Day1</p>
           <div class="w-4/6 px-4 flex items-center">
             <img class="h-16" src="../src/icons/snow.png" alt="">
-            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>          
+            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>
           </div>
           <div class="w-1/6 text-right">
             <p>5C</p>
@@ -111,22 +115,18 @@
           <p class="w-1/6 text-xl text-gray-200">Day1</p>
           <div class="w-4/6 px-4 flex items-center">
             <img class="h-16" src="../src/icons/snow.png" alt="">
-            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>          
+            <p class="text-lg ml-6">Lorem ipsum, dolor sit amet </p>
           </div>
           <div class="w-1/6 text-right">
             <p>5C</p>
             <p>-10C</p>
           </div>
         </div>
-        
-        
       </div>
     </div>
-  </div>
+  </section>
+  </main>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkMojPgsXBj-mgVGh5P9FtY6bpdrCU2iE&libraries=places">
-  </script>
 </body>
 
 </html>

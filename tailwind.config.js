@@ -13,7 +13,7 @@ module.exports = {
         'Asap': ['Asap', 'sans-serif'],
       },
       spacing: {
-        '128': '32rem'
+        '128': '40rem'
       }
     },
   },
