@@ -13,6 +13,8 @@ const getWeather = (lat, lon) => {
     const weatherData = await response.json();
     console.log(weatherData);
     const dailyData = weatherData.daily;
+    const currentData = weatherData.current;
+    console.log(Object.keys(currentData));
     createCards(cards);
     cards.map(card => putDayNightTemp(dailyData, cards));
     setIcon(dailyData, cards);
