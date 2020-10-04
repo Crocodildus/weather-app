@@ -15,14 +15,14 @@ const getWeather = (lat, lon) => {
     const dailyData = weatherData.daily;
     const currentData = weatherData.current;
     console.log(Object.keys(currentData));
-    createCards(cards);
-    cards.map(card => putDayNightTemp(dailyData, cards));
-    setIcon(dailyData, cards);
-    return weatherData;
+    // createCards(cards);
+    // cards.map(card => putDayNightTemp(dailyData, cards));
+    // setIcon(dailyData, cards);
+    // return weatherData;
   }
 
   fetchWeather().then(() => {
-    cards.forEach(card => cardTempl(card));
+    // cards.forEach(card => cardTempl(card));
   });
 };
 export default getWeather;
