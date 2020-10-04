@@ -5,6 +5,7 @@ import searchAutoComplete from './scripts/DOM/autocomplete';
 import icons from './scripts/var/icons';
 import autocompleteScript from './scripts/DOM/autocompleteCDN';
 import currentWeatherToHTML from './scripts/functions/fetchedDataToHTML';
+import convertVarToString from './scripts/functions/convertVarToString';
 
 currentWeatherToHTML();
 autocompleteScript();
