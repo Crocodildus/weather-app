@@ -1,5 +1,3 @@
-import * as futureDOM from '../var/futureDOMVar';
-import * as currentDOM from '../var/currentDOMVar';
 import insertIntoHtml from './insertIntoHTML';
 
 const fetchedDataToHTML = (fetchedData) => {
