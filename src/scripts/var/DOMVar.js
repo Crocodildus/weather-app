@@ -1,6 +1,6 @@
-const search = document.querySelector('[data-search]');
-const searchbtn = document.querySelector('[data-searchBtn]');
-const city = document.querySelector('[data-city]');
+const search = document.getElementById('searchInput');
+const searchbtn = document.getElementById('searchBtn');
+const city = document.getElementById('city');
 
 export {
   search,
