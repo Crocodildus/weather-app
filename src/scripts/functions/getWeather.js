@@ -3,6 +3,7 @@ import createCards from './createCards';
 import putDayNightTemp from './putDayNightTemp';
 import cardTempl from './HTMLCardTemplate';
 import setIcon from './setIcon';
+import fetchedDataToHTML from './fetchedDataToHTML';
 
 const cards = [];
 const getWeather = (lat, lon) => {
@@ -18,11 +19,11 @@ const getWeather = (lat, lon) => {
     // createCards(cards);
     // cards.map(card => putDayNightTemp(dailyData, cards));
     // setIcon(dailyData, cards);
-    // return weatherData;
+    return weatherData;
   }
 
-  fetchWeather().then(() => {
-    // cards.forEach(card => cardTempl(card));
+  fetchWeather().then((weatherData) => {
+    fetchedDataToHTML(weatherData.current);
   });
 };
 export default getWeather;
