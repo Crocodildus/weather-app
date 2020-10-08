@@ -5,7 +5,7 @@ const addSymbols = (val) => {
     case 'humidity':
       return ' %';
     case 'visibility':
-      return ' m';
+      return ' m.';
     case 'pressure':
       return ' Pa';
   }

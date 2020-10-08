@@ -5,7 +5,7 @@ const insertIntoHtml = (attribute, obj) => {
   if (dataSelector !== null) {
     dataSelector.textContent = (obj[attribute] + addSymbols(attribute));
   } else if (typeof obj[attribute] === 'object') {
-    console.log(obj[attribute]);
+    document.getElementById('currentDesc').textContent = obj[attribute][0].description;
   } else {
     return null;
   }
