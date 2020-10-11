@@ -1,7 +1,9 @@
 const addSymbols = (val) => {
   switch (val) {
     case 'feels_like':
-      return ' °C';
+    case 'dayTemp':
+    case 'nightTemp':
+      return '°C';
     case 'humidity':
       return ' %';
     case 'visibility':
