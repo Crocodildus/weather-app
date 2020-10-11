@@ -2,6 +2,7 @@ import weatherApi from '../var/weatherApi';
 import * as futureDOM from '../var/futureDOMVar.js';
 import currentDataToHTML from './currentDataToHTML';
 import futureDataToHTML from './futureDataToHTML';
+import minMaxToHTML from './tempMin&MaxHTML';
 
 const futureDOMArr = Object.entries(futureDOM);
 const getWeather = (lat, lon) => {
@@ -16,6 +17,7 @@ const getWeather = (lat, lon) => {
 
   fetchWeather().then((weatherData) => {
     currentDataToHTML(weatherData.current);
+    minMaxToHTML(weatherData.daily[0].temp);
     futureDOMArr.map(arr => futureDataToHTML(arr, weatherData.daily));
   });
 };

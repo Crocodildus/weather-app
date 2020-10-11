@@ -3,6 +3,8 @@ const addSymbols = (val) => {
     case 'feels_like':
     case 'dayTemp':
     case 'nightTemp':
+    case 'min':
+    case 'max':
       return '°C';
     case 'humidity':
       return ' %';
