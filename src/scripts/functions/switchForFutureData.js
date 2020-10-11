@@ -8,7 +8,7 @@ const switchFuture = (nameOfSelectorVar, selector, fetchedData) => {
   const selectorElement = selector[1];
   switch (nameOfSelectorVar) {
     case 'weekDay':
-      selectorElement.textContent = cardsDay(numInArr - 1);
+      selectorElement.textContent = cardsDay(numInArr);
       break;
     case 'weekIcon':
       setIcon(dataForDay, selectorElement);
