@@ -1,6 +1,6 @@
 const addSymbols = (val) => {
   switch (val) {
-    case 'feels_like':
+    case 'temp':
     case 'dayTemp':
     case 'nightTemp':
     case 'min':
