@@ -12,7 +12,6 @@ const getWeather = (lat, lon) => {
       mode: 'cors'
     });
     const weatherData = await response.json();
-    console.log(weatherData);
     const hourly = weatherData.hourly;
     return weatherData;
   }

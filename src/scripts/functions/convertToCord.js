@@ -13,7 +13,6 @@ const convertToCord = (cityName) => {
   }
 
   convert();
-  console.log(`${locationApi.base}${cityName}&key=${locationApi.key}`);
 };
 
 export default convertToCord;
