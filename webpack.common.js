@@ -2,21 +2,17 @@ const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PurgeCssPlugin = require('purgecss-webpack-plugin');
 const webpack = require('webpack');
-const Dotenv = require('dotenv').config( {
+const Dotenv = require('dotenv').config({
   path: path.join(__dirname, '/.env')
-} );
-
-const PATHS = {
-  src: path.join(__dirname, 'src')
-};
+});
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/Forecasty/'
   },
   module: {
     rules: [
@@ -89,9 +85,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css',
       chunkFilename: 'styles.css'
-    }),
-    new PurgeCssPlugin({
-      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
     })
   ]
 };
